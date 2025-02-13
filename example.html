@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Aqua Foods - Надійний партнер у дистрибуції</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            min-width: 1200px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 48px;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            padding-top: 80px; /* Height of header + some spacing */
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav__link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-btn {
+            background: #14B8A6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero {
+            background: #0E1D2A;
+            padding: 64px 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            min-height: 600px;
+        }
+
+        .hero__content {
+            color: white;
+        }
+
+        .hero__title {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .hero__subtitle {
+            font-size: 18px;
+            color: #94A3B8;
+            margin-bottom: 48px;
+        }
+
+        .hero__features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .hero__feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+        .hero__feature::before {
+            content: "✓";
+            color: #14B8A6;
+        }
+
+        .hero__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .services {
+            padding: 64px 48px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 48px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .service-card {
+            background: #F8FAFC;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+            color: #14B8A6;
+        }
+
+        .products {
+            padding: 64px 48px;
+            background: #F8FAFC;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .product-images {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .product-image {
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .stats {
+            padding: 64px 48px;
+            background: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .stat-text {
+            color: #64748B;
+            font-size: 16px;
+        }
+
+        .partners {
+            padding: 64px 48px;
+            background: #F8FAFC;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partner-logo {
+            width: 100%;
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        .about {
+            padding: 64px 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about__image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .about__content {
+            color: #333;
+        }
+
+        .about__title {
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+
+        .about__text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background: #0E1D2A;
+            color: white;
+            padding: 64px 48px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer__content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .footer__columns {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer__logo {
+            width: 120px;
+            margin-bottom: 24px;
+        }
+
+        .footer__title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .footer__list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer__link {
+            color: #94A3B8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 16px;
+            transition: color 0.3s;
+        }
+
+        .footer__link:hover {
+            color: white;
+        }
+
+        .footer__contact {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #94A3B8;
+            margin-bottom: 16px;
+        }
+
+        .footer__icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer__copyright {
+            color: #94A3B8;
+            font-size: 14px;
+        }
+
+        .footer__background {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+        }
+
+        /* Contact Form styles */
+        .contact-form {
+            padding: 64px 48px;
+            background: #fff;
+        }
+
+        .contact-form__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .contact-form__content {
+            padding-right: 48px;
+        }
+
+        .contact-form__title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .contact-form__subtitle {
+            font-size: 16px;
+            color: #64748B;
+            margin-bottom: 32px;
+        }
+
+        .form__row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .form__group {
+            margin-bottom: 24px;
+        }
+
+        .form__label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #64748B;
+        }
+
+        .form__input,
+        .form__textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #E2E8F0;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+
+        .form__input:focus,
+        .form__textarea:focus {
+            outline: none;
+            border-color: #14B8A6;
+        }
+
+        .form__textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form__submit {
+            background: #14B8A6;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form__submit:hover {
+            background: #0D9488;
+        }
+
+        .contact-form__image-container {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .contact-form__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-form__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(14, 29, 42, 0.7);
+            display: flex;
+            align-items: center;
+            padding: 48px;
+        }
+
+        .contact-form__overlay-title {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="/api/placeholder/120/40" alt="Aqua Foods" class="logo">
+        <nav class="nav">
+            <a href="#" class="nav__link">Головна</a>
+            <a href="#" class="nav__link">Про нас</a>
+            <a href="#" class="nav__link">Наша продукція</a>
+            <a href="#" class="nav__link">Контакти</a>
+            <a href="#" class="contact-btn">Зв'яжіться з нами</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Надійний партнер у дистрибуції в Києві та області</h1>
+            <p class="hero__subtitle">Виведіть свій бізнес на новий рівень з нами</p>
+            <ul class="hero__features">
+                <li class="hero__feature">Усі канали збуту</li>
+                <li class="hero__feature">Власний автопарк</li>
+                <li class="hero__feature">Портфель брендів</li>
+                <li class="hero__feature">Виключно власний капітал</li>
+            </ul>
+            <a href="#" class="contact-btn">Наша продукція</a>
+        </div>
+        <img src="/api/placeholder/600/600" alt="Warehouse operations" class="hero__image">
+    </section>
+
+    <section class="contact-form">
+        <div class="contact-form__container">
+            <div class="contact-form__content">
+                <h2 class="contact-form__title">Зв'яжіться з нами</h2>
+                <p class="contact-form__subtitle">Для отримання консультації, будь ласка, залиште заявку.</p>
+                
+                <form class="form">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Ваше ім'я*</label>
+                            <input type="text" id="name" class="form__input" placeholder="Ім'я" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Ваш номер телефону*</label>
+                            <input type="tel" id="phone" class="form__input" placeholder="Номер телефону" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="message" class="form__label">Ваше повідомлення</label>
+                        <textarea id="message" class="form__textarea" placeholder="Повідомлення" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="form__submit">Надіслати</button>
+                </form>
+            </div>
+            <div class="contact-form__image-container">
+                <img src="/api/placeholder/600/400" alt="Warehouse worker" class="contact-form__image">
+                <div class="contact-form__overlay">
+                    <h2 class="contact-form__overlay-title">Шукаєте надійного постачальника?<br>Довірте свою логістику професіоналам!</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title">Наші послуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="/api/placeholder/48/48" alt="Store" class="service-icon">
+                <h3>Дистрибюція товарів</h3>
+            </div>
+            <div class="service-card">
+                <img src="/api/placeholder/48/48" alt="Box" class="service-icon">
+                <h3>Складська логістика</h3>
+            </div>
+            <div class="service-card">
+                <img src="/api/placeholder/48/48" alt="Truck" class="service-icon">
+                <h3>Транспортна логістика</h3>
+            </div>
+            <div class="service-card">
+                <img src="/api/placeholder/48/48" alt="Headset" class="service-icon">
+                <h3>Обробка замовлень</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">Наша продукція</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-images">
+                    <img src="/api/placeholder/120/120" alt="Mineral water" class="product-image">
+                    <img src="/api/placeholder/120/120" alt="Mineral water" class="product-image">
+                    <img src="/api/placeholder/120/120" alt="Mineral water" class="product-image">
+                </div>
+                <h3 class="product-title">Мінеральна вода</h3>
+            </div>
+            <div class="product-card">
+                <div class="product-images">
+                    <img src="/api/placeholder/120/120" alt="Snacks" class="product-image">
+                </div>
+                <h3 class="product-title">Снеки</h3>
+            </div>
+            <div class="product-card">
+                <div class="product-images">
+                    <img src="/api/placeholder/120/120" alt="Syrups" class="product-image">
+                </div>
+                <h3 class="product-title">Сиропи</h3>
+            </div>
+            <div class="product-card">
+                <div class="product-images">
+                    <img src="/api/placeholder/120/120" alt="Spices" class="product-image">
+                </div>
+                <h3 class="product-title">Спеції та приправи</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">7000+</div>
+                <div class="stat-text">активних торгових точок</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4000+</div>
+                <div class="stat-text">кв. м складських приміщень</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">400</div>
+                <div class="stat-text">кв. м офіс в центрі Києва</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150</div>
+                <div class="stat-text">працівників</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <h2 class="section-title">Наші партнери</h2>
+        <div class="partners-grid">
+            <img src="/api/placeholder/160/80" alt="Partner logo" class="partner-logo">
+            <img src="/api/placeholder/160/80" alt="Partner logo" class="partner-logo">
+            <img src="/api/placeholder/160/80" alt="Partner logo" class="partner-logo">
+            <img src="/api/placeholder/160/80" alt="Partner logo" class="partner-logo">
+            <img src="/api/placeholder/160/80" alt="Partner logo" class="partner-logo">
+            <img src="/api/placeholder/160/80" alt="Partner logo" class="partner-logo">
+        </div>
+    </section>
+
+    <section class="about">
+        <img src="/api/placeholder/600/400" alt="Warehouse operations" class="about__image">
+        <div class="about__content">
+            <h2 class="about__title">Про Aqua Foods</h2>
+            <p class="about__text">Ми – провідна компанія з дистрибуції в Києві та області, що надає повний спектр послуг для вашого бізнесу. У нашому автопарку налічується 60 машин, завдяки чому ми обробляємо до 150 тонн продукції на добу. Наші 23 маршрути працюють 24 години на добу, включаючи святкові дні, що дозволяє забезпечувати безперервну доставку товарів.</p>
+            <p class="about__text">У центрі Києва ми маємо власний офіс, який можна використовувати для проведення презентацій вашого продукту або мотиваційних зустрічей серед супервайзерів, торгових представників та мерчендайзерів.</p>
+            <p class="about__text">Наша місія – забезпечити найвищий рівень обслуговування і підтримки, допомагаючи клієнтам досягати нових висот у їхній діяльності.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <img src="/api/placeholder/120/40" alt="Aqua Foods" class="footer__logo">
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Компанія</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Про нас</a></li>
+                        <li><a href="#" class="footer__link">Наша продукція</a></li>
+                        <li><a href="#" class="footer__link">Контакти</a></li>
+                        <li><a href="#" class="footer__link">Зв'яжіться з нами</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакти</h3>
+                    <ul class="footer__list">
+                        <li class="footer__contact">
+                            <img src="/api/placeholder/20/20" alt="Location" class="footer__icon">
+                            місто Київ, вул. Ямська, 28
+                        </li>
+                        <li class="footer__contact">
+                            <img src="/api/placeholder/20/20" alt="Phone" class="footer__icon">
+                            +38 (067) 299 65 64
+                        </li>
+                        <li class="footer__contact">
+                            <img src="/api/placeholder/20/20" alt="Email" class="footer__icon">
+                            office@af.org.ua
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 All Rights Reserved</p>
+                <div class="footer__background">
+                    <img src="/api/placeholder/200/200" alt="" aria-hidden="true">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

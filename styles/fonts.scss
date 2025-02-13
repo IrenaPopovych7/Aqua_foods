@@ -1,0 +1,13 @@
+$fontRoot: "https://files.edx.org/fonts/edx-fonts";
+$MontserratPath: "#{$fontRoot}/montserrat/fonts" !default;
+
+@mixin font-desktop-header {
+    //styleName: Montserrat/H1 —  36 Bold;
+font-family: Montserrat;
+font-size: 36px;
+font-weight: 700;
+line-height: 43.2px;
+// text-align: left;
+// text-underline-position: from-font;
+// text-decoration-skip-ink: none;
+}

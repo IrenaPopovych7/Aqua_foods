@@ -1,0 +1,16 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icon--menu {
+    background-image: url("/images/icons/menu.png");
+}
+
+.icon--close {
+    background-image: url("/images/icons/close.png");
+}

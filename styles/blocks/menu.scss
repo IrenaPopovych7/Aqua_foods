@@ -1,0 +1,29 @@
+/* Menu styles */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    padding: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu:target {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.menu__content {
+    padding: 20px;
+}

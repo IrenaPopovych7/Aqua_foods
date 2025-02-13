@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__top">
+          <img src="./images/aqua_food_logo+symbol-05.png" alt="Логотип Aqua Foods" class="header__logo" />
+          <a href="#menu" class="icon icon--menu"></a>
+      </div>
+  
+      <img src="./images/main_image.png" alt="Працівник Aqua Foods на складі" class="header__image">
+      
+      <div class="header__bottom">
+          <h1 class="header__title">Надійний партнер у дистрибуції в Києві та області</h1>
+          <p class="subtitle">Виведіть свій бізнес на новий рівень з нами</p>
+  
+          <ul class="header__features">
+              <li class="header__feature">
+                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <p class="header__feature-text">Усі канали збуту</p>
+              </li>
+              <li class="header__feature">
+                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <p class="header__feature-text">Власний автопарк</p>
+              </li>
+              <li class="header__feature">
+                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <p class="header__feature-text">Портфель брендів</p>
+              </li>
+              <li class="header__feature">
+                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <p class="header__feature-text">Виключно власний капітал</p>
+              </li>
+          </ul>
+  
+          <button class="btn">Наша продукція</button>
+      </div>
+  </header>
+  
+
+   <aside class="menu" id="menu">
+    <div class="menu__top">
+      <img src="./images/aqua_food_logo+symbol-05.png" alt="aqua_food" class="header__logo"/>
+
+      <a href="#" class="icon icon--close"></a>
+    </div>
+
+    <div class="menu__content">
+      <nav class="nav menu__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Головна</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about">Про нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#our-products" id="our-products">Наша продукція</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="btn">Зв'яжіться з нами</button>
+    </div>
+
+   </aside>
+
+   <main>
+    <section class="services">
+        <h2 class="section-title">Наші послуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="./images/icons/store.png" alt="Store icon" class="store">
+                <h3 class="service-title">Дистрибюція товарів</h3>
+            </div>
+            <div class="service-card">
+                <img src="./images/icons/cub.png" alt="Box icon" class="service-icon">
+                <h3 class="service-title">Складська логістика</h3>
+            </div>
+            <div class="service-card">
+                <img src="./images/icons/track.png" alt="Truck icon" class="service-icon">
+                <h3 class="service-title">Транспортна логістика</h3>
+            </div>
+            <div class="service-card">
+                <img src="./images/icons/headphones.png" alt="Headset icon" class="service-icon">
+                <h3 class="service-title">Обробка замовлень</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">Наша продукція</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="/images/Logo Products /image 33.pngS" alt="Beverages" class="product-image">
+                <h3 class="product-title">Вода та напої</h3>
+            </div>
+            <div class="product-card">
+                <img src="/api/placeholder/200/200" alt="Snacks" class="product-image">
+                <h3 class="product-title">Снеки</h3>
+            </div>
+            <div class="product-card">
+                <img src="/api/placeholder/200/200" alt="Syrups" class="product-image">
+                <h3 class="product-title">Сиропи</h3>
+            </div>
+            <div class="product-card">
+                <img src="/api/placeholder/200/200" alt="Food products" class="product-image">
+                <h3 class="product-title">Продукти харчування</h3>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+      <h2 class="contact-title">Контакти</h2>
+      <div class="contact-cards">
+          <div class="contact-card">
+              <img src="/api/placeholder/32/32" alt="Phone" class="contact-card__icon">
+              <h3 class="contact-card__title">Телефон</h3>
+              <a href="tel:+380672996564" class="contact-card__text">+38 (067) 299 65 64</a>
+          </div>
+          <div class="contact-card">
+              <img src="/api/placeholder/32/32" alt="Email" class="contact-card__icon">
+              <h3 class="contact-card__title">Email</h3>
+              <a href="mailto:office@af.org.ua" class="contact-card__text">office@af.org.ua</a>
+          </div>
+          <div class="contact-card">
+              <img src="/api/placeholder/32/32" alt="Address" class="contact-card__icon">
+              <h3 class="contact-card__title">Адреса</h3>
+              <a href="#" class="contact-card__text">місто Київ, вул. Ямська, 28</a>
+          </div>
+      </div>
+  </section>
+
+  <section class="contact-form-section">
+      <img src="/api/placeholder/800/600" alt="Warehouse worker" class="hero-image">
+      
+      <div class="contact-form-content">
+          <div class="hero-content">
+              <h2 class="hero-title">Шукаєте надійного постачальника? Довірте свою логістику професіоналам!</h2>
+          </div>
+
+          <h3 class="form-title">Зв'яжіться з нами</h3>
+          <p class="form-subtitle">Для отримання консультації, будь ласка, залиште заявку.</p>
+
+          <form class="contact-form">
+              <div class="form-group">
+                  <label for="name" class="form-label">Ваше ім'я*</label>
+                  <input type="text" id="name" class="form-input" placeholder="Ім'я" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone" class="form-label">Ваш номер телефону*</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="Номер телефону" required>
+              </div>
+              <div class="form-group">
+                  <label for="message" class="form-label">Ваше повідомлення</label>
+                  <textarea id="message" class="form-textarea" placeholder="Повідомлення"></textarea>
+              </div>
+              <button type="submit" class="submit-button">Надіслати</button>
+          </form>
+      </div>
+  </section>
+   </main>
+
+   <footer class="footer">
+    <div class="footer__content">
+        <img src="/api/placeholder/105/40" alt="Aqua Foods" class="footer__logo">
+        
+        <div class="footer__section">
+            <h3 class="footer__title">Компанія</h3>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Про нас</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Наша продукція</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Контакти</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Зв'яжіться з нами</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__section">
+            <h3 class="footer__title">Контакти</h3>
+            <div class="footer__list">
+                <a href="https://maps.google.com" class="footer__contact">
+                    <img src="/api/placeholder/20/20" alt="Location" class="footer__contact-icon">
+                    місто Київ, вул. Ямська, 28
+                </a>
+                <a href="tel:+380672996564" class="footer__contact">
+                    <img src="/api/placeholder/20/20" alt="Phone" class="footer__contact-icon">
+                    +38 (067) 299 65 64
+                </a>
+                <a href="mailto:office@af.org.ua" class="footer__contact">
+                    <img src="/api/placeholder/20/20" alt="Email" class="footer__contact-icon">
+                    office@af.org.ua
+                </a>
+            </div>
+        </div>
+
+        <p class="footer__copyright">© 2024 All Rights Reserved</p>
+    </div>
+    <img src="/api/placeholder/200/200" alt="" class="footer__background" aria-hidden="true">
+</footer>
+  </body>
+</html>
