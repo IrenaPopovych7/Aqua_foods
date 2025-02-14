@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
-    <script src="scripts/main.js" defer></script>
+    <script src="./src/index.js"></script>
+    <link rel="stylesheet" href="./src/styles/main.css">
   </head>
   <body class="page__body">
     <header class="header">
@@ -25,24 +25,24 @@
   
           <ul class="header__features">
               <li class="header__feature">
-                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <img src="./images/icons/yes.png" alt="Позначка" class="header__feature-icon"/>
                   <p class="header__feature-text">Усі канали збуту</p>
               </li>
               <li class="header__feature">
-                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <img src="./images/icons/yes.png" alt="Позначка" class="header__feature-icon"/>
                   <p class="header__feature-text">Власний автопарк</p>
               </li>
               <li class="header__feature">
-                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <img src="./images/icons/yes.png" alt="Позначка" class="header__feature-icon"/>
                   <p class="header__feature-text">Портфель брендів</p>
               </li>
               <li class="header__feature">
-                  <img src="./images/icons/mark.png" alt="Позначка" class="header__feature-icon"/>
+                  <img src="./images/icons/yes.png" alt="Позначка" class="header__feature-icon"/>
                   <p class="header__feature-text">Виключно власний капітал</p>
               </li>
           </ul>
   
-          <button class="btn">Наша продукція</button>
+          <button class="btn" onclick="location.href='our-products'">Наша продукція</button>
       </div>
   </header>
   
@@ -78,7 +78,7 @@
    </aside>
 
    <main>
-    <section class="services">
+    <section class="services container">
         <h2 class="section-title">Наші послуги</h2>
         <div class="services-grid">
             <div class="service-card">
@@ -100,50 +100,142 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products container" id="our-products">
         <h2 class="section-title">Наша продукція</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="/images/Logo Products /image 33.pngS" alt="Beverages" class="product-image">
-                <h3 class="product-title">Вода та напої</h3>
+                <img src="./images/OurProductsimages/water.png" alt="Beverages" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Вода та напої</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
             </div>
             <div class="product-card">
-                <img src="/api/placeholder/200/200" alt="Snacks" class="product-image">
-                <h3 class="product-title">Снеки</h3>
+                <img src="./images/OurProductsimages/снеки1.png" alt="Snacks" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Снеки</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
             </div>
             <div class="product-card">
-                <img src="/api/placeholder/200/200" alt="Syrups" class="product-image">
-                <h3 class="product-title">Сиропи</h3>
+                <img src="./images/OurProductsimages/сиропы.png" alt="Syrups" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Сиропи</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
             </div>
             <div class="product-card">
-                <img src="/api/placeholder/200/200" alt="Food products" class="product-image">
-                <h3 class="product-title">Продукти харчування</h3>
+                <img src="./images/OurProductsimages/дитячехарчування1.png" alt="Food products" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Спеції та приправи</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/OurProductsimages/паста1.png" alt="Food products" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Паста</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/OurProductsimages/консерви1.png" alt="Food products" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Консерви</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/OurProductsimages/дитячехарчування1.png" alt="Food products" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Дитяче харчування</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./images/OurProductsimages/соуситазаправки1.png" alt="Food products" class="product-image">
+                <div class="divider-line"></div>
+                <div class="wrap">
+                    <h3 class="product-title">Соуси та заправки</h3>
+                    <img src="./images/icons/arrow_right.png" alt="Explore more" class="service-icon arrow_size">
+                </div>
             </div>
         </div>
     </section>
-    <section class="contacts" id="contacts">
+    <section class="partners container">
+        <h2 class="section-title">
+            Наші партнери
+        </h2>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-item-1">
+                    <img src="./images/OurPartnersLogo/Silpo.png" alt="Image 1">
+                    <img src="./images/OurPartnersLogo/image.png" alt="Image 2">
+                    <img src="./images/OurPartnersLogo/image21.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image22.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image23.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image42.png" alt="Image 3">
+                </div>
+                <div class="carousel-item-2">
+                    <img src="./images/OurPartnersLogo/image31.png" alt="Image 1">
+                    <img src="./images/OurPartnersLogo/image41.png" alt="Image 2">
+                    <img src="./images/OurPartnersLogo/image25.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image27.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image28.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image29.png" alt="Image 3">
+                </div>
+                <div class="carousel-item-3">
+                    <img src="./images/OurPartnersLogo/image42.png" alt="Image 1">
+                    <img src="./images/OurPartnersLogo/image43.png" alt="Image 2">
+                    <img src="./images/OurPartnersLogo/image44.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image46.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image47.png" alt="Image 3">
+                    <img src="./images/OurPartnersLogo/image48.png" alt="Image 3">
+
+            </div>
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="carousel-dots">
+            <input type="radio" name="carousel" id="dot1" checked>
+            <input type="radio" name="carousel" id="dot2">
+            <input type="radio" name="carousel" id="dot3">
+            
+            <label for="dot1"></label>
+            <label for="dot2"></label>
+            <label for="dot3"></label>
+        </div>
+    </section>
+    <section class="contacts container" id="contacts">
       <h2 class="contact-title">Контакти</h2>
       <div class="contact-cards">
           <div class="contact-card">
-              <img src="/api/placeholder/32/32" alt="Phone" class="contact-card__icon">
+              <img src="./images/icons/phone.png" alt="Phone" class="contact-card__icon service-icon">
               <h3 class="contact-card__title">Телефон</h3>
               <a href="tel:+380672996564" class="contact-card__text">+38 (067) 299 65 64</a>
           </div>
           <div class="contact-card">
-              <img src="/api/placeholder/32/32" alt="Email" class="contact-card__icon">
+              <img src="./images/icons/envelop.png" alt="Email" class="contact-card__icon service-icon">
               <h3 class="contact-card__title">Email</h3>
               <a href="mailto:office@af.org.ua" class="contact-card__text">office@af.org.ua</a>
           </div>
           <div class="contact-card">
-              <img src="/api/placeholder/32/32" alt="Address" class="contact-card__icon">
+              <img src="./images/icons/Vector.png" alt="Address" class="contact-card__icon service-icon">
               <h3 class="contact-card__title">Адреса</h3>
               <a href="#" class="contact-card__text">місто Київ, вул. Ямська, 28</a>
           </div>
       </div>
   </section>
 
-  <section class="contact-form-section">
-      <img src="/api/placeholder/800/600" alt="Warehouse worker" class="hero-image">
+  <section class="contact-form-section container">
+      <img src="./images/girl_warehouse.png" alt="Warehouse worker" class="hero-image">
       
       <div class="contact-form-content">
           <div class="hero-content">
@@ -174,7 +266,7 @@
 
    <footer class="footer">
     <div class="footer__content">
-        <img src="/api/placeholder/105/40" alt="Aqua Foods" class="footer__logo">
+        <img src="./images/aqua_food_logo+symbol-05.png" alt="Aqua Foods" class="footer__logo">
         
         <div class="footer__section">
             <h3 class="footer__title">Компанія</h3>
@@ -201,15 +293,15 @@
             <h3 class="footer__title">Контакти</h3>
             <div class="footer__list">
                 <a href="https://maps.google.com" class="footer__contact">
-                    <img src="/api/placeholder/20/20" alt="Location" class="footer__contact-icon">
+                    <img src="./images/icons/Vector.png" alt="Location" class="footer__contact-icon service-icon">
                     місто Київ, вул. Ямська, 28
                 </a>
                 <a href="tel:+380672996564" class="footer__contact">
-                    <img src="/api/placeholder/20/20" alt="Phone" class="footer__contact-icon">
+                    <img src="./images/icons/phone.png" alt="Phone" class="footer__contact-icon service-icon">
                     +38 (067) 299 65 64
                 </a>
-                <a href="mailto:office@af.org.ua" class="footer__contact">
-                    <img src="/api/placeholder/20/20" alt="Email" class="footer__contact-icon">
+                <a href="mailto:office@af.org.ua" class="footer__contact service-icon">
+                    <img src="./images/icons/envelop.png" alt="Email" class="footer__contact-icon">
                     office@af.org.ua
                 </a>
             </div>
@@ -217,7 +309,7 @@
 
         <p class="footer__copyright">© 2024 All Rights Reserved</p>
     </div>
-    <img src="/api/placeholder/200/200" alt="" class="footer__background" aria-hidden="true">
+    <img src="./images/Image.png" alt="" class="footer__background" aria-hidden="true">
 </footer>
   </body>
 </html>

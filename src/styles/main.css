@@ -1,4 +1,7 @@
 .page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -88,13 +91,13 @@
 .header__feature-icon {
     width: 24px;
     height: 24px;
-    color: #0d9488;
+    filter: invert(48%) sepia(95%) saturate(373%) hue-rotate(134deg) brightness(88%) contrast(91%);
 }
 
 .btn {
     width: 100%;
     height: 48px;
-    background-color: #14B8A6;
+    background-color: #167D77;
     color: #ffffff;
     font-weight: 600;
     border: none;
@@ -103,8 +106,12 @@
 }
 
 .btn:hover {
-    background-color: #0d9488;
+    background-color: #74A09C;
 }
+.btn:focus {
+    background-color: #0E4F4B;
+}
+
 
 .icon {
     width: 24px;
@@ -116,11 +123,14 @@
 }
 
 .icon--menu {
-    background-image: url("/api/placeholder/24/24");
+    background-image: url("./../../images/icons/menu.png");
+}
+.icon--menu:hover {
+    background-color: #94A3B8;
 }
 
 .icon--close {
-    background-image: url("/api/placeholder/24/24");
+    background-image: url("./../../images/icons/close.png");
 }
 
 /* Menu styles */
@@ -130,7 +140,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: white;
+    background: #ffffff;
     padding: 8px;
     opacity: 0;
     pointer-events: none;
@@ -229,17 +239,27 @@
         margin: 0;
     }
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
 
-/ /* Services section */
+ /* Services section */
 .services {
     padding: 24px 16px;
     background: #fff;
+    display: flex;
+    
 }
 
 .section-title {
     color: #333;
     font-size: 24px;
     margin-bottom: 24px;
+    margin-inline: auto;
     font-weight: 600;
     padding: 0 16px;
 }
@@ -247,14 +267,14 @@
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: #f5f5f5;
+    gap: 16px;
+    background: #fff;
     border-radius: 8px;
     overflow: hidden;
 }
 
 .service-card {
-    background: #fff;
+    background: #f5f5f5;
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
@@ -264,11 +284,10 @@
 }
 
 .service-icon {
-    width: 32px;
-    height: 32px;
-    color: #14B8A6;
+    width: 40px;
+    height: 40px;
+    filter: invert(48%) sepia(95%) saturate(373%) hue-rotate(134deg) brightness(88%) contrast(91%);
 }
-
 .service-title {
     font-weight: 500;
     font-size: 14px;
@@ -296,6 +315,24 @@
     padding: 24px;
     border-radius: 4px;
     text-align: center;
+    position: relative;
+}
+.wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    position: absolute;
+    left: 0;
 }
 
 .product-image {
@@ -310,6 +347,12 @@
     font-size: 18px;
     color: #333;
     margin: 0;
+}
+.arrow_size {
+    width: 18px;
+height: 15px;
+top: 4.5px;
+left: 3px;
 }
 
 @media (min-width: 768px) {
@@ -330,6 +373,76 @@
     .products-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+/* Carousel Wrapper */
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Since you have 3 items */
+}
+
+.carousel-item-1,
+.carousel-item-2,
+.carousel-item-3 {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Hide radio buttons but keep them functional */
+.carousel-dots input[type="radio"] {
+    display: none;
+}
+
+/* Style for the dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-dots label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-dots label:hover {
+    background: #bbb;
+}
+
+/* Active dot styling */
+#dot1:checked ~ label:nth-of-type(1),
+#dot2:checked ~ label:nth-of-type(2),
+#dot3:checked ~ label:nth-of-type(3) {
+    background: #666;
+}
+
+/* Carousel movement based on selected dot */
+#dot1:checked ~ .carousel-track {
+    transform: translateX(0);
+}
+
+#dot2:checked ~ .carousel-track {
+    transform: translateX(-33.333%);
+}
+
+#dot3:checked ~ .carousel-track {
+    transform: translateX(-66.666%);
 }
 
 .contacts {
@@ -574,7 +687,7 @@
     bottom: 0;
     width: 200px;
     height: 200px;
-    opacity: 0.1;
+    filter: invert(22%) sepia(14%) saturate(1055%) hue-rotate(174deg) brightness(95%) contrast(87%);
 }
 
 @media (min-width: 768px) {
