@@ -246,7 +246,65 @@
     justify-content: center;
     
 }
+.stats-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.stats-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #0E1D2A;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0E1D2A;
+    margin-bottom: 12px;
+}
+
+.stat-description {
+    font-size: 16px;
+    color: #4A5568;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-section {
+        padding: 40px 20px;
+    }
+    
+    .stats-title {
+        font-size: 28px;
+    }
+}
  /* Services section */
 .services {
     padding: 24px 16px;
@@ -586,6 +644,18 @@ left: 3px;
     margin-bottom: 24px;
 }
 
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-item {
+    text-align: center;
+}
 @media (min-width: 768px) {
     .contact-cards {
         grid-template-columns: repeat(3, 1fr);
