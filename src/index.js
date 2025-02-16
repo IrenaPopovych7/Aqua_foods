@@ -1,31 +1,39 @@
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const dots = document.querySelectorAll('.carousel-dots input');
-    const track = document.querySelector('.carousel-track');
+    const partnerCards = document.querySelectorAll('.partner-card');
+    const isMobile = window.innerWidth <= 768;
+    const itemsPerPage = isMobile ? 6 : 12;
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('change', () => {
-            // Calculate the translation percentage based on the dot index
-            const translateX = -index * 33.333;
-            track.style.transform = `translateX(${translateX}%)`;
-            
-            // Update active dot
-            dots.forEach((d, i) => {
-                if (i === index) {
-                    d.checked = true;
-                }
-            });
+    // Function to show appropriate cards
+    function showCards(startIndex) {
+        partnerCards.forEach((card, index) => {
+            if (index >= startIndex && index < startIndex + itemsPerPage) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
         });
-    });
-
-    // Optional: Auto-rotate carousel
-    let currentIndex = 0;
-    function autoRotate() {
-        currentIndex = (currentIndex + 1) % dots.length;
-        dots[currentIndex].checked = true;
-        const event = new Event('change');
-        dots[currentIndex].dispatchEvent(event);
     }
-    
-    // Uncomment the next line if you want auto-rotation
-    // setInterval(autoRotate, 5000); // Rotate every 5 seconds
+dots.forEach((dot, index) => {
+    dot.addEventListener('change', () => {
+        const startIndex = index * itemsPerPage;
+        showCards(startIndex);
+    });
 });
+
+// Initial display
+showCards(0);
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    const newIsMobile = window.innerWidth <= 768;
+    if (newIsMobile !== isMobile) {
+        location.reload(); // Refresh page on breakpoint change
+    }
+});
+});
+
+  const swiper = new Swiper(...);
